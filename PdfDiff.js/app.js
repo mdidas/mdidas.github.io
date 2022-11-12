@@ -77,8 +77,6 @@ const renderPdfDiff = function() {
     diffInfo.innerHTML = diffPageCount === 0
       ? '<span class="check"></span> The documents are identical.'
       : '<span class="diff-mark"></span> ' + diffMessage;
-
-    diffInfo.innerHTML += '<a href="./index.html">Clear Diff</a>'
 }
 
 const render = function(fileReader, index) {
