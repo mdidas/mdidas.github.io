@@ -79,7 +79,7 @@ const renderPdfDiff = function() {
       : '<span class="diff-mark"></span> ' + diffMessage;
 }
 
-const render = function(fileReader, index) {
+const renderPdfDocument = function(fileReader, index) {
 
   const pdf = new PdfRenderer(fileReader);
   const loader = document.getElementById('loader');
@@ -91,9 +91,6 @@ const render = function(fileReader, index) {
       if (renderedPdfs[0] !== null && renderedPdfs[1] !== null) {
         loader.className = '';
 
-        const intro = document.getElementById('intro-text');
-        intro.className = '-hidden';
-
         // sleep is necessary to make loader animation visible
         sleep(200).then(() => {
 
@@ -101,28 +98,25 @@ const render = function(fileReader, index) {
           loader.className = '-hidden';
         });
       }
-        document.getElementById('file-input-0').value = '';
-        document.getElementById('file-input-1').value = '';
     },
     () => console.log('error')
   );
 
 }
 
-const handleUpload = function(e) {
+const fileDropped = function(e, file) {
 
   const currentTarget = e.currentTarget;
-  const file = currentTarget.files[0];
-  const index = currentTarget.id.replace('file-input-', '');
+  const index = currentTarget.id.replace('file-drop-area-', '');
 
   if (file) {
     fileReader = new FileReader();
-    fileReader.onloadend = () => render(fileReader, index);
+    fileReader.onloadend = () => renderPdfDocument(fileReader, index);
     fileReader.readAsArrayBuffer(file);
   }
-
 };
 
-const pdfInputs = [ 'file-input-0', 'file-input-1' ];
-
-pdfInputs.forEach((id, index) => document.getElementById(id).onchange = handleUpload);
+[ 'file-drop-area-0', 'file-drop-area-1' ].forEach(function(id, index) {
+  const fileDropArea = new FileDropArea(id);
+  fileDropArea.on('fileDropped', fileDropped);
+}); 

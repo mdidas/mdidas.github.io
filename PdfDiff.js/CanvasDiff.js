@@ -7,7 +7,7 @@ class CanvasDiff {
     }
 
     getCanvasData(canvas) {
-        return canvas.getContext('2d').getImageData(0, 0, canvas.width, canvas.height);
+        return canvas.getContext('2d', { willReadFrequently: true }).getImageData(0, 0, canvas.width, canvas.height);
     }
 
     renderMessages(parentElement, messages) {

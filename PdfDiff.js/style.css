@@ -13,6 +13,10 @@ header {
     color: #eee;
 }
 
+header svg {
+    color: red;
+}
+
 h1 {
     margin: 0;
     padding: 0.2em;
@@ -36,10 +40,6 @@ h4 > a {
     color: #fff!important;
 }
 
-#github-link {
-    margin-bottom: 70px;
-}
-
 #github-link > a {
     color: #000;
     font-weight: bolder;
@@ -54,7 +54,6 @@ section {
     width: calc(33.3% - 15px);
     vertical-align: top;
     text-align: center;
-    margin-top: 4em;
 }
 
 section:nth-of-type(2) {
@@ -68,37 +67,37 @@ canvas, .diff-msg {
     display: inline-block;
 }
 
-.upload-area {
-    position: relative;
-    height: 40px;
+.diff-and-upload-area > div {
+    width: calc(33% - 3em);
+    display: inline-block;
+    overflow: hidden;
 }
 
-.upload-area > input, .upload-area > .file {
-    position:absolute;
-}
-
-#file-0 {
-    top: 0;
-    left: 15%;
-    font-size: 2em;
+.no {
+    font-size: 53px;
     font-weight: bold;
+    display: inline-block;
 }
 
-#file-1{
-    top: 0;
-    right: 15%;
-    font-size: 2em;
-    font-weight: bold;
+.diff-and-upload-area > div:nth-child(2) {
+    width: calc(33% + 1em);
 }
 
-#file-input-0 {
-    top: 4em;
-    left: 10%;
+#file-drop-area-0, #file-drop-area-1 {
+    height: 130px;
+    border: 1px dashed #000;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 2em;
 }
 
-#file-input-1 {
-    top: 4em;
-    right: 10%;
+.drop-area-drag-over {
+    background-color: #eee;
+}
+
+.drop-area-dropped {
+    background-color: #aaa;
+    color: white;
 }
 
 .canvas-wrapper {
@@ -123,7 +122,7 @@ canvas, .diff-msg {
     top: calc(50% - 30px);
     left: calc(50% - 10px);
     width: 30px;
-    height: 30px;
+    height: 60px;
 }
 
 .diff-mark:before, .diff-mark:after {
@@ -154,7 +153,7 @@ canvas, .diff-msg {
     height: 80px;
     animation: spin 1s linear infinite;
     position: absolute;
-    top: 40vh;
+    top: 50vh;
     left: calc(50vw - 60px);
     z-index: 100;
 }
@@ -166,14 +165,52 @@ canvas, .diff-msg {
 
 #github-link {
     text-align: center;
+    margin-bottom: 1em;
 }
 
 #diff-info {
     position: relative;
-    height: 100px;
     font-size: 2em;
-    line-height: 0em;
     font-weight: bold;
+    height: 100px;
+    padding-top: 2em;
+}
+
+#diff-info > .check, #diff-info > .diff-mark {
+    top: 0;
+}
+
+#privacy {
+    margin-top: -3em;
+    font-weight: normal;
+}
+
+#privacy, #privacy > div > div {
+    font-size: 16px;
+    text-align: left;
+}
+
+#privacy > div > div {
+    line-height: 1.5em;
+}
+
+#privacy .check {
+    scale: 0.4;
+}
+
+#privacy ul {
+    text-align: left;
+    list-style: none;
+    line-height: 1.5em;
+    width: 340px;
+    display: inline-block;
+}
+
+.inline-check {
+    display: inline-block;
+    position:relative;
+    width: 2em;
+    margin-right: 1em;
 }
 
 .page-number {
