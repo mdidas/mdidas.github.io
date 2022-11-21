@@ -83,21 +83,19 @@ const renderPdfDocument = function(fileReader, index) {
 
   const pdf = new PdfRenderer(fileReader);
   const loader = document.getElementById('loader');
+  loader.className = '';
 
   pdf.render('pdf-' + index).then(
     (renderedPdf) => { 
       renderedPdfs[index] = renderedPdf;
-
+    
       if (renderedPdfs[0] !== null && renderedPdfs[1] !== null) {
-        loader.className = '';
-
-        // sleep is necessary to make loader animation visible
-        sleep(200).then(() => {
-
-          renderPdfDiff();
-          loader.className = '-hidden';
-        });
+        renderPdfDiff();
+        loader.className = '-hidden';
+        document.getElementById('diff-info').scrollIntoView();
       }
+
+      loader.className = '-hidden';
     },
     () => console.log('error')
   );
@@ -109,7 +107,11 @@ const fileDropped = function(e, file) {
   const currentTarget = e.currentTarget;
   const index = currentTarget.id.replace('file-drop-area-', '');
 
-  if (file) {
+  currentTarget.innerHTML = index == 0
+    ? 'Original File<br><br>' + currentTarget.innerHTML
+    : 'Modified File<br><br>' + currentTarget.innerHTML;
+
+  if (file && file.name.endsWith('.pdf')) {
     fileReader = new FileReader();
     fileReader.onloadend = () => renderPdfDocument(fileReader, index);
     fileReader.readAsArrayBuffer(file);

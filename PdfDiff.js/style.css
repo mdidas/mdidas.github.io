@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 70px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -7,10 +12,10 @@ body {
  }
 
 header {
-    background-color: #444;
-    padding: 5px;
-    margin-bottom: 20px;
-    color: #eee;
+    box-shadow: rgb(100 50 10 / 10%) 0 -18px 50px 0 inset, rgb(0 0 0 / 12%) 0px 5px 10px;
+    padding: 30px;
+    margin-bottom: 70px;
+    border-bottom: 1px solid #bbb;
 }
 
 header svg {
@@ -21,13 +26,12 @@ h1 {
     margin: 0;
     padding: 0.2em;
     text-align: center;
-    color: rgb(244, 206, 66);
+    color: rgb(255, 200, 70);
     font-size: 4em;
     font-weight: bold;
 }
 
 header > h4 {
-    color: #ddd;
     padding: 0;
     margin: 0.5em 0 1.5em 0;
 }
@@ -37,7 +41,7 @@ h4 {
 }
 
 h4 > a {
-    color: #fff!important;
+    color: #000!important;
 }
 
 #github-link > a {
@@ -67,6 +71,10 @@ canvas, .diff-msg {
     display: inline-block;
 }
 
+.diff-and-upload-area {
+    margin-bottom: 70px;
+}
+
 .diff-and-upload-area > div {
     width: calc(33% - 3em);
     display: inline-block;
@@ -85,10 +93,10 @@ canvas, .diff-msg {
 
 #file-drop-area-0, #file-drop-area-1 {
     height: 130px;
-    border: 1px dashed #000;
-    border-radius: 5px;
+    border: 1px solid #bbb;
     text-align: center;
     padding-top: 2em;
+    box-shadow: rgb(0 0 0 / 20%) 0px 5px 10px, rgb(100 50 10 / 10%) 0 -18px 50px 0 inset;
 }
 
 .drop-area-drag-over {
@@ -96,8 +104,7 @@ canvas, .diff-msg {
 }
 
 .drop-area-dropped {
-    background-color: #aaa;
-    color: white;
+    background-color: #fff;
 }
 
 .canvas-wrapper {
@@ -153,7 +160,7 @@ canvas, .diff-msg {
     height: 80px;
     animation: spin 1s linear infinite;
     position: absolute;
-    top: 50vh;
+    top: 70vh;
     left: calc(50vw - 60px);
     z-index: 100;
 }
