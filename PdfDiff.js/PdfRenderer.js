@@ -31,7 +31,7 @@ class PdfRenderer {
 
                 pdf.getPage(p).then(function(page) {
 
-                    const scale = 2;
+                    const scale = 4;
                     const pdfViewport = page.getViewport({ scale: scale });
                     let pageIndex = parseInt(page._pageIndex) + 1;
 
@@ -42,6 +42,7 @@ class PdfRenderer {
                     
                     const canvas = document.createElement('canvas');
                     const context = canvas.getContext('2d');
+                    context.imageSmoothingEnabled = false;
 
                     canvasWrapper.appendChild(canvas);
 
@@ -88,7 +89,7 @@ class PdfRenderer {
       let pageData = [];
       for (let p = 1; p <= pdf.numPages; p++) {
           let canvas = document.getElementById(selector + '-p' + p);
-          pageData[p] = canvas.getContext('2d').getImageData(0, 0, canvas.width, canvas.height);    
+          pageData[p] = canvas.getContext('2d').getImageData(0, 0, canvas.width, canvas.height);
       }
 
       return pageData;

@@ -62,6 +62,8 @@ class CanvasDiff {
         canvas.height = this.canvas1.height;
 
         canvasWrapper.appendChild(canvas);
+        // const diffCtx = canvas.getContext('2d', { willReadFrequently: true });
+        //diffCtx.beginPath();
 
         let diffCount = 0;
         let diffData = this.getCanvasData(canvas);
@@ -76,12 +78,18 @@ class CanvasDiff {
 
                 if (!pixel1.isEqualTo(pixel2)) {
 
+                    // console.log(x,y,pixel1.pixelData, pixel2.pixelData);
+
                     diffCount++;
 
                     diffData.data[index] = pixel2.getAverage();
                     diffData.data[index+1] = pixel1.getAverage();
                     diffData.data[index+2] = 0;
                     diffData.data[index+3] = 255;
+
+
+                    //diffCtx.strokeStyle = 'black';
+                    //diffCtx.arc(x, y, 10, 0, Math.PI * 2, false);
                 }
                 else {
                     diffData.data[index] = data1[index];
@@ -98,7 +106,10 @@ class CanvasDiff {
             this.canvas1.remove();
         }
 
+
         canvas.getContext('2d').putImageData(diffData, 0, 0);
+
+        //diffCtx.stroke();
 
         return canvasWrapper;
     }

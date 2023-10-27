@@ -33,7 +33,7 @@ const renderPdfDiff = function() {
         emptyCanvas.height = canvasElements[0][1].height;
         emptyCanvas.style.display = 'none';
 
-        const ctx = emptyCanvas.getContext('2d');
+        const ctx = emptyCanvas.getContext('2d', { willReadFrequently: true });
         ctx.fillStyle = 'white';
         ctx.fillRect(0,0, emptyCanvas.width, emptyCanvas.height);
 
