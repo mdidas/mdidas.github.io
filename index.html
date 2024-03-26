@@ -1,11 +1,598 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Michael Didas</title>
         <meta name="description" content="Michael Didas personal homepage">
         <meta name="keywords" content="Michael Didas personal homepage">
+        <link rel="stylesheet" href="./css/bootstrap-5.3.3.min.css">
+        <link rel="stylesheet" href="./css/bootstrap-icons-1.11.3.min.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        Hi!
+
+        <div class="initial-screen" id="init">
+
+            <section class="window container">
+
+                <div class="headline">
+                    <span class="window-button" style="background-color: #ff3b47;"></span>
+                    <span class="window-button" style="background-color: #ffc100;"></span>
+                    <span class="window-button" style="background-color: #00d742;"></span>
+                    <span class="window-title">Michael Didas</span>
+                </div>
+
+                <div class="terminal">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p>
+                                Hi, I'm Michael!
+                            </p>
+
+                            <p>
+                                I am a mathematician and work as a web developer at <a href="https://dagstuhl.de" target="_blank">Schloss Dagstuhl</a>.
+                            </p>
+
+                            <p>
+                                My ORCID is
+                                <img width="32" style="width: 20px" src="./img/32px-ORCID_iD.png" alt="ORCID"/>
+                                <a href="https://orcid.org/0000-0002-0153-0084" target="_blank">https://orcid.org/0000-0002-0153-0084</a>
+                            </p>
+
+                            <p>
+                                Visit me at github:<br>
+                                - <img width="32" style="width: 20px" src="./img/github-inverted.svg" alt="github"/>&nbsp;<a href="https://github.com/mdidas">https://github.com/mdidas</a> (private&nbsp;projects)<br>
+                                - some of my professional projects can be found at:
+                                <img width="32" style="width: 20px" src="./img/github-inverted.svg" alt="github"/>&nbsp;<a href="https://github.com/dagstuhl-publishing">https://github.com/dagstuhl-publishing</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-sm-8">
+
+                            <p>
+                                ~$
+                                <span class="text-to-type">
+                                    cd hobbies<br>
+                                    ~/hobbies$ ls -al<br>
+                                    - <a href="#coding">coding</a><br>
+                                    - <a href="#mathematics">mathematics</a><br>
+                                    - <a href="#music">making music (guitar and vocals)</a><br>
+                                    - <a href="#running">running (up to 21.1k)</a><br>
+                                    - <a href="#creative">being creative.</a><br>
+                                    <br>
+                                    <a href="#">michael@didas.eu</a>:~/hobbies$<span style="width: 0.6em; display: inline-block"></span>
+                                </span>
+                                <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+                            </p>
+
+                        </div>
+
+                        <div class="col-sm-4" style="min-height: 240px;">
+                            <img class="md" src="./img/md-comic.png" alt="M. Didas" />
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="text-center" style="font-size: 120px; margin-top: -50px">
+                <a href="#coding" style="color: black"><i class="bi bi-chevron-compact-down"></i></a>
+            </div>
+
+        </div>
+
+        <span class="scroll-up hidden">
+            <a href="#init"><i class="bi bi-arrow-up-circle-fill"></i></a>
+        </span>
+
+        <section id="coding" class="container">
+
+            <h2 class="bg-stripes-yellow">{ CODING }</h2>
+
+            <div class="bg-stripes-grey section-body">
+
+                <p class="text-center m-3">
+                    My focus is on web applications based on PHP (laravel), Javascript (Vanilla, jQuery, Vue.js) and MySql.
+                </p>
+
+                <h3 class="m-2 mb-3">Some tiny Javascript fun projects</h3>
+
+                <div class="row">
+
+                    <div class="col-sm-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi bi-code-slash"></i> PdfDiff.js</h5>
+                                <p class="card-text">
+                                    A pixel-based PDF comparison tool in Javascript, based on Mozilla's PDF.js.
+                                    No need to upload your PDF files to a server. Everything happens in your browser.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <span>
+                                    <i class="bi bi-box-arrow-up-right"></i> <a href="https://mdidas.github.io/PdfDiff.js/index.html">Demo</a>
+                                </span>
+                                <span style="float: right">
+                                    <img width="32" style="width: 20px" src="./img/github-inverted.svg" alt="github"/> <a href="https://github.com/mdidas/PdfDiff.js">Source Code</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi bi-code-slash"></i> TxtDiff.js</h5>
+                                <p class="card-text">
+                                    A Javascript tool for text-diffing, based on the
+                                    <a href="https://en.wikipedia.org/wiki/Longest_common_subsequence">longest-common-subsequence algorithm</a>.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <span>
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                                    <a href="https://mdidas.github.io/TxtDiff.js/index.html">Demo</a>
+                                </span>
+                                <span style="float: right">
+                                    <img width="32" style="width: 20px" src="./img/github-inverted.svg" alt="github"/> <a href="https://github.com/mdidas/sDiff.js">Source Code</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi bi-code-slash"></i> Fractals</h5>
+                                <p class="card-text">
+                                    A fractal generator using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>
+                                    and <a href="https://leafletjs.com/">leaflet.js</a> (a Javascript library for interactive maps).
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <span>
+                                    <i class="bi bi-box-arrow-up-right"></i> <a href="https://mdidas.github.io/leaflet-fractal/index.html">Demo</a>
+                                </span>
+                                <span style="float: right">
+                                    <img width="32" style="width: 20px" src="./img/github-inverted.svg" alt="github"/> <a href="https://github.com/mdidas/leaflet-webworker-fractal" target="_blank">Source Code</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h3 class="m-2 mb-3">Some professional projects</h3>
+
+                <div class="row">
+
+                    <div class="col-sm-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi bi-code-slash"></i> Some of Dagstuhl's Web services</h5>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.dagstuhl.de/en" target="_blank">The Dagstuhl Website</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://submission.dagstuhl.de" target="_blank">Dagstuhl Submission Server</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://drops.dagstuhl.de" target="_blank">DROPS (Dagstuhl's Publication Server)</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 mb-3">
+                        <div class="card h-100 mb-2">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi bi-code-slash"></i> Dagstuhl's LaTeX project (php)</h5>
+                                <p class="card-text">
+                                    A php class library for reading macros and environments from LaTeX files.
+                                    Used by Dagstuhl Publishing to read metadata from LaTeX files, to validate the files,
+                                    to extract the bibliography entries, get compilation messages, ...
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <span style="float: right">
+                                    <img width="32" style="width: 20px" src="./img/github-inverted.svg" alt="github"/> <a href="https://github.com/dagstuhl-publishing/latex" target="_blank">Source Code</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="mathematics" class="container mt-5">
+            <h2 class="bg-stripes-yellow">{ MATHEMATICS }</h2>
+
+            <div class="bg-stripes-grey section-body">
+                <p class="m-3">
+                    I studied mathematics and physics at Saarland University from 1994 to 2002.
+                </p>
+                <ul>
+                    <li>1996 Pre-Exams (Vordiplom) in mathmatics and physics</li>
+                    <li>1998 Master's Degree (Diplom-Mathematiker)</li>
+                    <li>2002 Ph. D. Dissertation (Dr. rer. nat.),<br>
+                        Diploma and Dissertation both under the supervision of Prof. Dr. Jörg Eschmeier</li>
+                </ul>
+                <p class="m-3">
+                    After graduating, I worked as a high-school teacher for 15 years and continued my mathematical studies as an independent researcher,
+                    mostly in collaboration with Jörg Eschmeier.
+                    The thematic focus of my work is on multidimensional operator theory with connections to several complex variables and measure theory.
+                </p>
+
+                <h3 class="m-2 mb-3 mt-4">Published Papers</h3>
+                <ul class="article-list mb-3">
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        Spectra of Quotient Modules
+                        <br> (joint with Jörg Eschmeier, Michael Hartz, and Marcel Scherer)
+                        <br>
+                        <span class="text-grey">Journal of Functional Analysis, <i>2024</i>, 286(3), 110223, Elsevier</span>
+                        <br>
+                        <a target="_blank" href="https://doi.org/10.1016/j.jfa.2023.110223">https://doi.org/10.1016/j.jfa.2023.110223</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        A-Isometries and Hilbert-A-Modules Over Product Domains
+                        <br>
+                        <span class="text-grey">Complex Analysis and Operator Theory, <i>2022</i>, 16(5), 1-23, Springer</span>
+                        <br>
+                        <a target="_blank" href="https://doi.org/10.1007/s11785-022-01243-6">https://doi.org/10.1007/s11785-022-01243-6</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        On Schatten-class perturbations of Toeplitz operators
+                        <br> (joint with Jörg Eschmeier and Dominik Schillo)
+                        <br>
+                        <span class="text-grey">Journal of Functional Analysis, <i>2017</i>, 272(6), 24442-2462, Elsevier</span>
+                        <br>
+                        <a target="_blank" href="https://doi.org/10.1016/j.jfa.2016.11.007">https://doi.org/10.1016/j.jfa.2016.11.007</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        Dual Toeplitz Operators on the Sphere Via Spherical Isometries
+                        <br> (joint with Jörg Eschmeier)
+                        <br>
+                        <span class="text-grey">Integral Equations and Operator Theory, <i>2015</i>, 83(2), 291-300, Springer</span>
+                        <br>
+                        <a target="_blank" href="https://doi.org/10.1007/s00020-015-2232-7">https://doi.org/10.1007/s00020-015-2232-7</a>
+                    </li>
+                </ul>
+
+                <ul class="article-list mb-3 collapse" id="more-papers">
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        On the Structure of Hankel Algebras
+                        <br>
+                        <span class="text-grey">Integral Equations and Operator Theory, <i>2014</i>, 80(4), 511-525, Springer</span>
+                        <br>
+                        <a target="_blank" href="https://doi.org/10.1007/s00020-014-2151-z">https://doi.org/10.1007/s00020-014-2151-z</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        Derivations on Toeplitz Algebras
+                        <br> (joint with Jörg Eschmeier)
+                        <br>
+                        <span class="text-grey">Canadian Mathematical Bulletin, <i>2014</i>, 57(2), 270-276, Canadian Mathematical Society</span>
+                        <br>
+                        <a target="_blank" href="https://doi.org/10.4153%2Fcmb-2013-001-9">https://doi.org/10.4153%2Fcmb-2013-001-9</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        On the essential commutant of analytic Toeplitz operators associated with spherical isometries
+                        <br> (joint with Jörg Eschmeier and Kevin Everard)
+                        <br>
+                        <span class="text-grey">Journal of Functional Analysis, <i>2011</i>, 261(5), 1361-1383, Elsevier</span>
+                        <br>
+                        <a target="_blank" href="https://doi.org/10.1016/j.jfa.2011.05.005">https://doi.org/10.1016/j.jfa.2011.05.005</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        Inner functions and spherical isometries
+                        <br> (joint with Jörg Eschmeier)
+                        <br>
+                        <span class="text-grey">Proceedings of the AMS, <i>2011</i>, 139(8), 2877-2889, American Mathematical Society</span>
+                        <br>
+                        <a target="_blank" href="https://doi.org/10.1090/s0002-9939-2011-11034-7">https://doi.org/10.1090/s0002-9939-2011-11034-7</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        On the slice map problem for H^∞ (Ω) and the reflexivity of tensor products
+                        <br>
+                        <span class="text-grey">Proceedings of the AMS, <i>2009</i>, 137(9), 2969-2978, American Mathematical Society</span>
+                        <br>
+                        <a target="_blank" href="https://doi.org/10.1090/s0002-9939-09-09925-0">https://doi.org/10.1090/s0002-9939-09-09925-0</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        Unitary extensions of Hilbert A(D)-modules split
+                        <br> (joint with Jörg Eschmeier)
+                        <br>
+                        <span class="text-grey">Journal of Functional Analysis, <i>2006</i>, 238(2), 565-577, Elsevier</span>
+                        <br>
+                        <a target="_blank" href="https://doi.org/10.1016/j.jfa.2006.02.002">https://doi.org/10.1016/j.jfa.2006.02.002</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        Invariant subspaces for commuting pairs with normal boundary dilation and dominating Taylor spectrum
+                        <br>
+                        <span class="text-grey">Journal of Operator Theory, <i>2005</i>, 54(1), 169-187, Theta</span>
+                        <br>
+                        <a target="_blank" href="https://www.jstor.org/stable/24715678">https://www.jstor.org/stable/24715678</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        Subnormal tuples on strictly pseudoconvex and bounded symmetric domains
+                        <br> (joint with Jörg Eschmeier)
+                        <br>
+                        <span class="text-grey">Acta Sci. Math. (Szeged), <i>2005</i>, 71(3-4), 691-731, János Bolyai Mathematical Institute (University of Szeged)</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        Spherical Isometries are Reflexive
+                        <br>
+                        <span class="text-grey">Integral Equations and Operator Theory, <i>2005</i>, 52(4), 599-604, Springer</span>
+                        <br>
+                        <a target="_blank" href="https://doi.org/10.1007/s00020-005-1354-8">https://doi.org/10.1007/s00020-005-1354-8</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        Dual algebras generated by von Neumann n-tuples over strictly pseudoconvex sets
+                        <br>
+                        <span class="text-grey">Dissertationes Mathematicae, <i>2004</i>, 425, 1-77, Institute of Mathematics, Polish Academy of Sciences</span>
+                        <br>
+                        <a target="_blank" href="https://doi.org/10.4064/dm425-0-1">https://doi.org/10.4064/dm425-0-1</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-file-text"></i>
+                        E(T^n)-subscalar n-tuples and the Cesaro operator on H^p
+                        <br>
+                        <span class="text-grey">Annales Universitatis Saraviensis, <i>2000</i> 10(2), Universität des Saarlandes</span>
+                    </li>
+                </ul>
+
+                <div class="text-center">
+                    <a class="mb-3 paper-toggle" data-bs-toggle="collapse" href="#more-papers" role="button" aria-expanded="false" aria-controls="more-papers"
+                    style="font-size: 40px;">
+                        <span><i class="bi bi-chevron-compact-down"></i></span><span class="hidden"><i class="bi bi-chevron-compact-up"></i></span>
+                    </a>
+                </div>
+
+                <br>
+            </div>
+
+        </section>
+
+        <section id="music" class="container mt-5">
+            <h2 class="bg-stripes-yellow">{ MUSIC }</h2>
+
+            <div class="bg-stripes-grey section-body">
+
+                <div class="row">
+                    <div class="col-sm-9" style="padding: 1em 2em 0 2em">
+
+                        <h3 style="text-align: left"><i class="bi bi-quote" style="font-size: 30px"></i> And that four right chords can make me cry</h3>
+                        <div class="text-grey">From the Lyrics of "Semic-charmed life" by Third Eye Blind</div>
+
+                        <p class="mt-4">
+                            Music is pure emotion! - And it doesn't even have to be complicated.
+                            It's amazing how many songs from the most diverse genres simply "work" with a few chords on a steelstring guitar and two-part vocals.
+                            Simply fun to do that with friends!
+                        </p>
+
+                    </div>
+                    <div class="col-sm-3 guitar-container">
+                        <img class="img-right-bottom" src="./img/guitar.png" alt="guitar" style="width: 200px; right: 1em"/>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="running" class="container mt-5">
+            <h2 class="bg-stripes-yellow">{ RUNNING }</h2>
+
+            <div class="bg-stripes-grey section-body">
+
+                <div class="row">
+                    <div class="col-sm-9" style="padding: 1em 2em 0 2em">
+
+                        <h3 style="text-align: left"><i class="bi bi-quote" style="font-size: 30px;"></i> Fisch schwimmt, Vogel Fliegt, Mensch läuft</h3>
+                        <div>"Fish swims, bird flies, man runs"</div>
+                        <div class="text-grey">Emil Zapotek</div>
+                        <p class="mt-4">
+                            What other sport can compete with that:
+                            You don't need a lot of equipment,
+                            your age hardly plays a role,
+                            and you don't need a special place to do it.
+                            You just go out and start running. And come back completely exhausted, but simply happy.
+                            In between, things happen in your head that you couldn't consciously initiate - good ideas just come to you.
+                        </p>
+                        <p>
+                            I ran my first half marathon in 2011 and I've been hooked ever since.
+                            The nice thing is that even without a training plan, the distance is easily achievable for an amateur runner, and yet there is still that certain challenge.
+                            So, just the thing for a "fair-weather runner" like me. 😎
+                        </p>
+                        <p class="mb-4">Personal best: 1h 39min (Saarschleife 2013)</p>
+                    </div>
+                    <div class="col-sm-3" style="min-height: 200px;">
+                        <img class="img-right-bottom" src="./img/shoes.png" alt="running shoes" style="width: 200px; right: 1em"/>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="creative" class="container mt-5">
+            <h2 class="bg-stripes-yellow">{ BEING CREATIVE }</h2>
+
+            <div class="bg-stripes-grey section-body" style="padding: 2em">
+
+                <h3 class="mb-4"><i class="bi bi-brush-fill" style="font-size: 20px"></i> Some acrylic paintings...</h3>
+
+                <div class="pics row">
+                    <div class="col-sm-4">
+                        <span title="Bird" class="rotate-r"><img loading="lazy" src="./img/creative/bird.jpg" alt="bird"/></span>
+                    </div>
+                    <div class="col-sm-4">
+                        <span title="Fly" class=""><img loading="lazy" src="./img/creative/fly.jpg" alt="fly"/></span>
+                    </div>
+                    <div class="col-sm-4">
+                        <span title="Butterfly" class="rotate-r"><img loading="lazy" src="./img/creative/butterfly.jpg" alt="butterfly"/></span>
+                    </div>
+                </div>
+
+                <div class="pics row">
+
+                    <div class="col-sm-6">
+                        <span title="Residue Theorem" class="rotate-l" style="max-width: 400px; float:right;">
+                            <img loading="lazy" src="./img/creative/maths-art-1.jpg" alt="residue theorem"/>
+                        </span>
+                    </div>
+                    <div class="col-sm-6">
+                        <span title="Spectral Theorem" class="rotate-r" style="max-width: 400px;">
+                            <img loading="lazy" src="./img/creative/maths-art-2.jpg" alt="spectral theorem"/>
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="pics row">
+
+                    <div class="col-sm-4">
+                        <span title="A Wall full of Physics" class="rotate-l"><img loading="lazy" src="./img/creative/physics-wall.jpg" alt="physics"/></span>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <span title="Seifert Surface"><img loading="lazy" src="./img/creative/seifert-surface.jpg" alt="Seifert surface"/></span>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <span title="Sun & Moon" class="rotate-r"><img loading="lazy" src="./img/creative/sun-moon.jpg" alt="sun-moon"/></span>
+                    </div>
+                </div>
+
+                <div class="pics row">
+                    <div class="col-sm-4">
+                        <span title="Alpha & Omega"><img loading="lazy" src="./img/creative/alpha-omega.jpg" alt="alpha-omega"/></span>
+                    </div>
+                    <div class="col-sm-4">
+                        <span title="Angel" class="rotate-l"><img loading="lazy" src="./img/creative/angel.jpg" alt="angel"/></span>
+                    </div>
+                    <div class="col-sm-4">
+                        <span title="Abstract Art" class="rotate-r"><img loading="lazy" src="./img/creative/abstract.jpg" alt="butterfly"/></span>
+                    </div>
+                </div>
+
+                <h3 class="mb-4 mt-5">Some woodwork from small to large</h3>
+
+                <div class="pics row">
+
+                    <div class="col-sm-4">
+                        <span title="Chicken" class="rotate-l" style="max-width: 400px;">
+                            <img loading="lazy" src="./img/creative/chicken.jpg" alt="chicken"/>
+                        </span>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <span title="Owl" class="rotate-r" style="max-width: 400px;">
+                            <img loading="lazy" src="./img/creative/owl.jpg" alt="owl"/>
+                        </span>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <span title="Easter Bunny" class="rotate-l" style="max-width: 400px;">
+                            <img loading="lazy" src="./img/creative/easter-bunny.jpeg" alt="easter bunny"/>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="pics row">
+
+                    <div class="col-sm-6">
+                        <span title="Breakfast Board &quot;Terminal&quot;" class="rotate-l" style="max-width: 400px; float:right;">
+                            <img loading="lazy" src="./img/creative/terminal.jpg" alt="terminal"/>
+                        </span>
+                    </div>
+                    <div class="col-sm-6">
+                        <span title="Breakfast Board &quot;Guitar&quot;" class="rotate-r" style="max-width: 400px;">
+                            <img loading="lazy" src="./img/creative/breakfast-board.jpg" alt="guitar"/>
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="pics row">
+
+                    <div class="col-sm-4">
+                        <span title="Star" class="rotate-l" style="max-width: 400px;">
+                            <img loading="lazy" src="./img/creative/star.jpg" alt="star"/>
+                        </span>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <span title="Ellipses" class="" style="max-width: 400px;">
+                            <img loading="lazy" src="./img/creative/ellipses.jpg" alt="ellipses"/>
+                        </span>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <span title="Fish" class="rotate-r" style="max-width: 300px;">
+                            <img loading="lazy" src="./img/creative/fish.jpeg" alt="fish"/>
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="pics row">
+
+                    <div class="col-sm-4">
+                    </div>
+
+                    <div class="col-sm-4">
+                        <span title="Place to relax" class="rotate-r">
+                            <img loading="lazy" src="./img/creative/corner-to-relax.jpg" alt="relax"/>
+                        </span>
+                    </div>
+
+                    <div class="col-sm-4">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container text-center mb-5">
+                <b>Impressum</b> &nbsp; Inhaltlich verantwortlich:
+                Michael Didas &bullet;
+                Zum Sportplatz 53 &bullet;
+                D-66649 Oberthal &bullet;
+                Germany &bullet; michael@didas.eu
+            </div>
+        </section>
+
+        <script type="text/javascript" src="./TypeWriter.js/TypeWriter.js"></script>
+        <script type="text/javascript" src="./js/bootstrap-5.3.3.min.js"></script>
+        <script type="text/javascript" src="./js/app.js"></script>
+
     </body>
 </html>
