@@ -30,8 +30,8 @@ class FileDropArea {
       }
 
       if (file !== null) {
-        const date = file.lastModifiedDate.toString().replace(/\(.*\)/, '');
-        this.rootElement.innerHTML = `<b>${file.name}</b><br><br>${date}`;
+        const date = new Date(file.lastModified);
+        this.rootElement.innerHTML = `<b>${file.name}</b><br><br>${date.toTimeString().replace(/\(.*\)/, '')}`;
         this.eventHandlers['fileDropped'](e, file);
       }
     }
